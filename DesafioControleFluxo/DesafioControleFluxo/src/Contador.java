@@ -1,31 +1,30 @@
+import java.util.Scanner;
 
-
-public class Contador {
-    // TO-DO:
-            // CASE1:
-                // criar variavel com valor de 2000
-                // criar variavel com salario pretendido pelo candidato, valor aleatorio
-                // criar if para caso o salario base for maior que o salario pretendido.
-                    // o if terá a seguinte mensagem: "LIGAR PARA O CANDIDATO"
-                // criar um else caso o salario base for igual ao pretendido.
-                    // imprima no console: "LIGAR PARA O CANDIDATO COM CONTRA PROPOSTA"
-                // Criar um outro caso em que nenhum dos casos anteriores forem atendidos
-                    // imprima: "AGUARDANDO RESULTADO DEMAIS CANDIDATOS"
+public class contador {
+	public static void main(String[] args) {
+		Scanner terminal = new Scanner(System.in);
+		System.out.println("Digite o primeiro parâmetro");
+		int parametroUm = terminal.nextInt();
+		System.out.println("Digite o segundo parâmetro");
+		int parametroDois = terminal.nextInt();
+		
+		try {
+			//chamando o método contendo a lógica de contagem
+			static int contar(parametroUm, parametroDois);
+		
+		}catch (ParametrosInvalidosException) {
+			//imprimir a mensagem: O segundo parâmetro deve ser maior que o primeiro
+            System.out.println("O segundo parâmetro deve ser maior que o primeiro");
+		}
+		
+	}
+	static void contar(int parametroUm, int parametroDois ) throws ParametrosInvalidosException {
+		//validar se parametroUm é MAIOR que parametroDois e lançar a exceção
+        if (parametroUm > parametroDois){
             
-    public static void main(String[] args) throws Exception {
-        analisarCandidato(1900.0);
-        analisarCandidato(2200.0);
-        analisarCandidato(2000.0);
-    }
-    // Método com o salário pretendido pelo candidato e seus respectivos testes:
-    static void analisarCandidato(double salarioPretendido) {
-        double salarioBase = 2000.0;
-        if(salarioBase > salarioPretendido){
-            System.out.println("LIGAR PARA O CANDIDATO");
-        }else if(salarioBase == salarioPretendido){
-            System.out.println("LIGAR PARA O CANDIDATO COM CONTRA PROPOSTA");
-        } else {
-            System.out.println( "AGUARDANDO RESULTADO DEMAIS CANDIDATOS");
         }
-    }
+		
+		int contagem = parametroDois - parametroUm;
+		//realizar o for para imprimir os números com base na variável contagem
+	}
 }
